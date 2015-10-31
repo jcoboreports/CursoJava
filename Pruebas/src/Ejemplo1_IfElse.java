@@ -9,6 +9,7 @@ public class Ejemplo1_IfElse {
 		
 		int b = 3;
 		
+		//Siempre que trabajemos con unidades monetarias usar BigDecimal, para no tener problemas con los redondeos.
 		BigDecimal bigNumber = new BigDecimal(0.10);
 		
 		int bitmask = 0x000F;
