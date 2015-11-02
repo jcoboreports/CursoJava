@@ -19,13 +19,23 @@ public class Calculadora implements interfazCalculadora {
 		Pattern p = Pattern.compile("[\\D]");
 		Matcher m = p.matcher(entrada);
 		int i= 0;
+		int lastIndex = 0;
 		while(m.find()){
-			int index = m.start()-1;
+			int index = m.start();
 			if(index<0)
-			{
-				index = 0;
+			{			
+				m.find();
+				index = m.start()-1;
+				lastIndex = 0;
 			}
-			numeros[i]= Integer.parseInt(entrada.substring(index,m.end()));			
+			else{
+				numeros[i]= Integer.parseInt(entrada.substring(lastIndex,index));
+				lastIndex= index;
+			}
+			i++;
+		}
+		if(entrada.length()>lastIndex){
+			numeros[i] = Integer.parseInt(entrada.substring(lastIndex));
 		}
 		/*
 		String[] signos = entrada.split("[\\D]");

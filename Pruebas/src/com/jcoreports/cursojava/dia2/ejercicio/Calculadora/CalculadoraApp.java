@@ -14,23 +14,18 @@ public class CalculadoraApp {
 			do{
 				BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 				Calculadora calc = new Calculadora();
-				int result = 0;				
+				int result = 0;	
+				int[] numeros;
 				System.out.println("Introduzca los números a sumar separados por espacios:");
 				String entrada = input.readLine();
-				calc.parseaEntrada(entrada);
 				
-				if(entrada.equalsIgnoreCase("FIN")){
+				if(entrada.equalsIgnoreCase("FIN") || entrada.equalsIgnoreCase("EXIT") || entrada.equalsIgnoreCase("END")){
+					System.out.println("Hasta la próxima!");
 					break;
 				}
-				if(entrada.contains("+")){
-					result = calc.sumar(entrada.split("\\+"));	
-				}else if(entrada.contains("-")){
-					result = calc.restar(entrada.split("-"));		
-				}
-				else if(entrada.contains(" "))
-				{
-					result = calc.sumar(entrada.split(" "));				
-				}			
+				numeros = calc.parseaEntrada(entrada);
+				result = calc.sumar(numeros);
+					
 				System.out.println(result);
 			}while(true);
 		}catch(Exception ex){
