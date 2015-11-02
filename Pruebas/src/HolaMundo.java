@@ -1,4 +1,4 @@
-import com.jcoreports.cursojava.ejercicioCartas.Carta;
+import com.jcoboreports.cursojava.ejercicioCartas.Carta;
 
 public class HolaMundo {
 

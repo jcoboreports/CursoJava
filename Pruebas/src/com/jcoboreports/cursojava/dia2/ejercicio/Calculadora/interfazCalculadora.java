@@ -1,4 +1,4 @@
-package com.jcoreports.cursojava.dia2.ejercicio.Calculadora;
+package com.jcoboreports.cursojava.dia2.ejercicio.Calculadora;
 
 public interface interfazCalculadora {
 	public int sumar(int numeros[]);

@@ -1,4 +1,4 @@
-package com.jcoreports.cursojava.ejercicioCartas;
+package com.jcoboreports.cursojava.ejercicioCartas;
 
 public class Carta {
 	String valor;

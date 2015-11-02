@@ -1,4 +1,4 @@
-package com.jcoreports.cursojava.dia2.ejercicio.Calculadora;
+package com.jcoboreports.cursojava.dia2.ejercicio.Calculadora;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
