@@ -1,6 +1,6 @@
 package com.jcoboreports.cursojava.dia5.ejercicioCoches;
 
-public class Coche {
+public class Coche implements Cloneable{
 	
 	private final String marca;
 	private final String modelo;
@@ -82,5 +82,8 @@ public class Coche {
 		return "Coche [marca=" + marca + ", modelo=" + modelo + ", motor=" + motor + ", piloto=" + piloto + "]\n";
 	}
 	
-	
+	@Override
+	protected Object clone() throws CloneNotSupportedException { 
+		return new Coche(this.marca, this.modelo, this.motor, this.piloto);
+	}
 }
