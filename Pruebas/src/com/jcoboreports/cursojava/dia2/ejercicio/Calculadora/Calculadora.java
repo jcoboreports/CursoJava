@@ -83,4 +83,9 @@ public class Calculadora implements interfazCalculadora {
 		return result;
 	}
 
+	public long dividir(long dividendo, long divisor) {
+		return dividendo / divisor;
+		
+	}
+
 }
